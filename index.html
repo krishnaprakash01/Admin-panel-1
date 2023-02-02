@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="./index.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  </head>
+<body>
+    
+<div class="sidenavbar" >
+
+  <ul id="mySidenav" class="sidenav">
+    <div class="mt-2">
+      <span class="sideNavHeader ">
+        ACME
+      </span>
+    </div>
+
+    <br>
+    <li class="spacer"></li>
+
+
+    <li class="nav-item">
+        <a class="nav-link wave-effect collapsed wave-effect" data-parent="#sidebarCookie" data-toggle="collapse" href="#navDashboard" aria-expanded="false" aria-controls="page-dashboards">
+          <box-icon class="boxIcon"  name='home-alt-2'></box-icon>
+            <span class="menu-title">Home</span>
+        </a>
+  
+    </li>
+    <li class="nav-item activeNav">
+        <a class="nav-link wave-effect collapsed" data-parent="#sidebarCookie" data-toggle="collapse" href="#navPageLayouts" aria-expanded="false" aria-controls="page-layouts">
+          <box-icon class="boxIcon"  name='bar-chart-square'></box-icon>
+            <span class="menu-title">Dashboard</span>
+        </a>
+    
+    </li>
+    <li class="nav-item">
+        <a class="nav-link wave-effect collapsed" data-parent="#sidebarCookie" data-toggle="collapse" href="#navElements" aria-expanded="false" aria-controls="page-elements">
+          <box-icon class="boxIcon"  name='envelope' ></box-icon>
+            <span class="menu-title">Inbox</span>
+
+            <span class="menu-title1">New</span>
+        </a>
+    
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link wave-effect collapsed" data-parent="#sidebarCookie" data-toggle="collapse" href="#navMailbox" aria-expanded="false" aria-controls="page-mailbox">
+
+          <box-icon class="boxIcon" name='list-ul'></box-icon>
+            <span class="menu-title">products</span>
+        </a>
+       
+    </li>
+
+
+    
+    <li class="nav-item">
+        <a class="nav-link wave-effect collapsed" data-parent="#sidebarCookie" data-toggle="collapse" href="#navMailbox" aria-expanded="false" aria-controls="page-mailbox">
+          <box-icon class="boxIcon"  name='cog' type='solid' ></box-icon>
+            <span class="menu-title">Admin</span>
+            
+        </a>
+       
+    </li>
+
+</ul>
+
+<div id="main" class="">
+
+    
+    <div class=" mainContent">
+      <div class="backHeader">
+        <header id="sectoinheader" class=" header sectoinheader">
+
+            <div class="leftHeader d-flex gap-1">
+                <box-icon class="boxIcon"  name='filter' class="searchIcon"  onclick="openNav()"></box-icon>
+                <box-icon class="boxIcon"  name='search-alt-2' class="searchIcon"></box-icon>
+                <input type="text" class="searchinput" placeholder="Search transactions, invoices or help">
+            </div>
+            <div class="rightHeader d-flex gap-1 dropdown">
+                <box-icon class="boxIcon"  name='bell'></box-icon>
+                <div class="btn btn-secondary dropdown-toggle menu1 d-flex align-items-center firstMenu "  id="dropdownMenuButton2" data-bs-toggle="dropdown">
+                 <span class="menu1color"> John Doe</span>
+                <box-icon class="boxIcon" name='down-arrow'></box-icon>
+              </div>
+                <ul class="dropdown-menu menu1Content" aria-labelledby="dropdownMenuButton2">
+                  <div class="d-flex mt-3 justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-end" >
+                    <img src="./assets/profile-pic-02.jpg" alt="" class="cardporfile2">
+                    <div  class="d-flex mx-2"  style="flex-direction: column;">
+                      <span class="card1Name">Bavid Kames</span>
+                    <span class="card1Country">Assigned you on the call with Sara</span>
+                    </div>
+                  </div>
+                  <div class="card1Country">2 min ago</div>
+                  </div>
+                  
+                  <div class="d-flex mt-3 justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-end" >
+                    <img src="./assets/profile-pic-06.jpg" alt="" class="cardporfile2">
+                    <div  class="d-flex mx-2"  style="flex-direction: column;">
+                      <span class="card1Name">Alexa Marry</span>
+                    <span class="card1Country">Marked the task New UI as done</span>
+                    </div>
+                  </div>
+                  <div class="card1Country">5 min ago</div>
+                  </div>
+                  
+                  <div class="d-flex mt-3 justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-end" >
+                    <img src="./assets/profile-pic-05.jpg" alt="" class="cardporfile2">
+                    <div  class="d-flex mx-2"  style="flex-direction: column;">
+                      <span class="card1Name">Eva Maria</span>
+                    <span class="card1Country">Added a new comment on Sales task</span>
+                    </div>
+                  </div>
+                  <div class="card1Country">10 min ago</div>
+                  </div>
+                  
+
+
+
+                </ul>
+            
+               
+          
+                <div class="avathor btn btn-secondary dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                    <img src="./assets/profile-pic-01.jpg" alt="" class="profilaImg">
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li class="dripli"> <box-icon class="boxIcon" name='user'></box-icon> <a class="dropdown-item" href="#"> My Profile</a></li>
+                  <li class="dripli"><box-icon class="boxIcon" name='message-square-detail'></box-icon><a class="dropdown-item" href="#">Billing</a></li>
+                  <li class="dripli"><box-icon class="boxIcon" name='log-in'></box-icon><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+          
+              <!-- <button class="btn btn-secondary dropdown-toggle" type="button"  aria-expanded="false">
+                Dropdown button
+              </button> -->
+  
+ 
+        </header>
+
+      </div>
+<div class="innerContent">
+        <div class="d-flex mx-3 my-2  justify-content-between align-items-center">
+            
+                <span  class="OverViewText">Overview</span>
+          
+                <button class=" addFundButton">Add Funds &nbsp; <box-icon class="boxIcon"  name='plus-circle' ></box-icon></button>
+          
+        </div>
+<div class=" innercard">
+        <div class="row mx-1  " style="position: relative;">
+
+            <div class="col-12 col-xl-8 firstCardMobile">
+
+
+                <div class="row ">
+
+
+                    <div class="col-12 col-xl-6 " >
+                      <div class="card1">
+
+                        <div class="cardTitile">Sales Distribution</div>
+
+                        <canvas id="chart" width="800" height="500" class="mt-4"></canvas>
+                      </div>
+                    </div>
+             
+                    <div class="col-12 col-xl-6 ">
+                      <div class="card1">
+                        <div class="cardTitile">Sales Distribution</div>
+                        <canvas id="myChart" width="800" height="400"  class="mt-5"></canvas>
+                      </div>
+                
+                    </div>
+                    <div class="col-12 col-xl-12  mt-xl-4" >
+                      
+                      <div class="cardTable">
+                        <div class="cardTitile">Referrer</div>
+                        <div class="table1card">
+                        <table class="table mt-3">
+                            <thead>
+                              <tr>
+                                <th scope="col">Location</th>
+                                <th scope="col">Views</th>
+                                <th scope="col">Sales</th>
+                                <th scope="col">Conversion</th>
+                                <th scope="col">Total</th>
+                            
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row">google.com</td>
+                                <td>3746</td>
+                                <td>752</td>
+                                <td>43%</td>
+                                <td>$119,291</td>
+                          
+                              </tr>
+                              <tr>
+                                <td scope="row">facebook.com</td>
+                                <td>8126</td>
+                                <td>728</td>
+                                <td>32%</td>
+                                <td>$17,291</td>
+                            
+                              </tr>
+                              <tr>
+                                <td scope="row">twitter.com</td>
+                                <td>8836</td>
+                                <td>694</td>
+                                <td>28%</td>
+                                <td>$16,218</td>
+                             
+                              </tr>
+                              <tr>
+                                <td scope="row">Direct, email, IM</td>
+                                <td>1173</td>
+                                <td>645</td>
+                                <td>24%</td>
+                                <td>$14,421</td>
+
+                              </tr>
+                              <tr>
+                                <td scope="row">linkedin.com</td>
+                                <td>2736</td>
+                                <td>539</td>
+                                <td>29%</td>
+                                <td>$12,370</td>
+
+                              </tr>
+                              <tr>
+                                <td scope="row">instagram.com</td>
+                                <td>2739</td>
+                                <td>539</td>
+                                <td>20%</td>
+                                <td>$12,370</td>
+
+                              </tr>
+    
+                              <tr>
+                                <td scope="row" class="showMoreButton">Show More</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                          </div>
+                        </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="col-12 col-xl-4">
+
+                <div class="row ">
+
+                    <div class="col-12 col-xl-12 cardRight11" >
+
+                      <div class="cardRight1">
+                        <div class="topSection">
+
+                          <img src="./assets/profile-pic-01.jpg" alt="" class="cardporfile">
+                          <span class="cardName">
+                            Nick Herasimenka
+                          </span>
+                          <span class="cardCountry">
+                            United States
+                          </span>
+                          <span class="d-flex gap-2 cardIcons"> 
+                            <box-icon class="boxIcon"  type='logo' name='twitter'></box-icon>
+                            <box-icon class="boxIcon"  name='facebook-circle' type='logo' ></box-icon>
+                            <box-icon class="boxIcon"  name='linkedin' type='logo' ></box-icon>
+                            <box-icon class="boxIcon"  name='whatsapp' type='logo' ></box-icon>
+                          </span>
+                        </div>
+
+                        <div class="lowerSection mt-4">
+                          <div class="cardTitile d-flex justify-content-between">
+                            <span> Our User  </span>
+                            <box-icon class="boxIcon"  name='dots-vertical'></box-icon>
+
+                          </div>
+
+                            <div class="userSection ">
+
+<div class="d-flex mt-3 justify-content-between align-items-center">
+  <div class="d-flex justify-content-between align-items-center" >
+  <img src="./assets/profile-pic-02.jpg" alt="" class="cardporfile1">
+  <div  class="d-flex mx-2"  style="flex-direction: column;">
+    <span class="card1Name">Drew James</span>
+  <span class="card1Country">United States</span>
+  </div>
+</div>
+<div class="card1Country">Mobile : 8715674877</div>
+</div>
+
+<div class="d-flex mt-3 justify-content-between align-items-center">
+  <div class="d-flex justify-content-between align-items-center" >
+  <img src="./assets/profile-pic-03.jpg" alt="" class="cardporfile1">
+  <div  class="d-flex mx-2"  style="flex-direction: column;">
+    <span class="card1Name">Bavid Kames</span>
+  <span class="card1Country">United States</span>
+  </div>
+</div>
+<div class="card1Country">Mobile : 8715674877</div>
+</div>
+
+<div class="d-flex mt-3 justify-content-between align-items-center">
+  <div class="d-flex justify-content-between align-items-center" >
+  <img src="./assets/profile-pic-04.jpg" alt="" class="cardporfile1">
+  <div  class="d-flex mx-2"  style="flex-direction: column;">
+    <span class="card1Name">Lavid Emes</span>
+  <span class="card1Country">United States</span>
+  </div>
+</div>
+<div class="card1Country">Mobile : 8715674877</div>
+</div>
+
+
+
+
+                            </div>
+                        
+                          </div>
+                        </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-12 col-xl-12 mt-2 ">
+                      <div class="cardRight2">
+
+                        <div class="cardTitile d-flex justify-content-between">
+                          <span>Our Users  </span>
+                          <box-icon class="boxIcon"  name='dots-vertical'></box-icon>
+                      
+                        </div>
+<div class="mt-4 overlayer" style="position: relative;">
+  <div class="playbutton">
+    <box-icon  name='play-circle' class="playIcon"></box-icon>
+  </div>
+                        <img src="./assets/video thumbnail.png" type="" class="videimage">
+                        <div></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+    </div>
+
+</div>
+
+
+<script>
+  var xValues = ["Caneda", "France", "Italy", "Japan"];
+  var yValues = [30, 49, 35, 35];
+  var barColors = [
+    "#B5B3FB",
+    "#80E2FF",
+    "#F49FA8",
+    "#FFDF94",
+  ];
+  
+  new Chart("myChart", {
+    type: "doughnut",
+   
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues,
+      
+      }]
+    },
+
+  });
+var panel = true
+  function openNav() {
+    if(panel){
+      panel = !panel
+ document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "225px";
+  document.getElementById("main").style.paddingLeft = "16px";
+  document.getElementById("sectoinheader").style.marginLeft = "9px";
+  document.getElementById("sectoinheader").style.borderTopLeftRadius = "25px";
+
+  
+
+    }else{
+      document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("main").style.padding = "0";
+  document.getElementById("sectoinheader").style.marginLeft = "0";
+  document.getElementById("sectoinheader").style.borderTopLeftRadius = "0";
+  panel = !panel
+    }
+
+
+
+
+    
+}
+
+
+
+var ctx = document.getElementById('chart').getContext('2d');
+    
+    var gradient = ctx.createLinearGradient(0, 0, 0, 300);
+        gradient.addColorStop(0, '#B5B3FB');   
+        gradient.addColorStop(1, '#b5b3fb7d');
+        var gradient1 = ctx.createLinearGradient(0, 0, 0, 300);
+        gradient.addColorStop(0, '#b0eaff6e');   
+        gradient.addColorStop(1, '#B0EAFF');
+        
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+            datasets: [{
+                backgroundColor: gradient,
+                    label: 'Total Views',
+                data: [19, 5, 17, 12, 18, 10],
+            },
+            {
+                backgroundColor: gradient,
+                    label: 'Product Sold',
+                data: [15, 11, 15, 18, 15, 25],
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            tension: 0.3
+        }
+    });
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
